@@ -11,6 +11,7 @@ let timer = 0;
 refs.btnStart.addEventListener('click', startChangeColor);
 
 function startChangeColor(evt) {
+  refs.btnStart.removeEventListener('click', startChangeColor);
   refs.btnStop.addEventListener('click', stopChangeColor);
 
   timer = setInterval(() => {
